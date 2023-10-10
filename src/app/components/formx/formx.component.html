@@ -1,0 +1,52 @@
+<h3>Use extended FormGroup</h3>
+<p>
+  Item Id: {{itemId$ | async}}
+
+  <span *ngIf="showNavigation$ | async" class="navigation">
+    <a [routerLink]="['..', 1]">Id: 1</a>
+    <a [routerLink]="['..', 2]">Id: 2</a>
+    <a [routerLink]="['..', 3]">Id: 3</a>
+    <a [routerLink]="['..', 4]">Id: 4</a>
+  </span>
+</p>
+<p>
+  Is new: {{isNew$ | async}}
+</p>
+
+
+<form [formGroup]="this.form">
+
+  <div>
+    <label>Country</label>
+
+    <select [formControl]="form.controls.countryCode2">
+      <option selected>NONE</option>
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Item price</label>
+
+    <input [formControl]="form.controls.itemPrice">
+  </div>
+
+  <div>
+    <label>Number of items</label>
+
+    <input [formControl]="form.controls.numberOfItems">
+  </div>
+
+  <div>
+    <label>VAT</label>
+
+    <input [formControl]="form.controls.vat">
+  </div>
+
+  <div class="total">
+    <label>Total price</label>
+
+    <span>{{totalPrice$ | async}}</span>
+  </div>
+</form>

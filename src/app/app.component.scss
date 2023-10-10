@@ -1,0 +1,34 @@
+.navigation {
+  a {
+    margin-right: 10px;
+  }
+
+  div {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+
+    &.problem {
+      border: 1px solid red;
+    }
+
+    &.simple {
+      border: 1px solid gray;
+    }
+
+    &.initvar {
+      border: 1px solid greenyellow;
+    }
+
+    &.formx {
+      border: 1px solid green;
+    }
+  }
+
+  margin-bottom: 50px;
+}
+
+.log {
+  margin-top: 50px;
+  border: 1px solid red;
+}

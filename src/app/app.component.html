@@ -1,0 +1,29 @@
+<div class="navigation">
+  <div class="problem">
+    <a [routerLink]="'problem/new'">Problem new</a>
+    <a [routerLink]="'problem/1'">Problem existing</a>
+  </div>
+
+  <div class="simple">
+    <a [routerLink]="'simple/new'">Simple new</a>
+    <a [routerLink]="'simple/1'">Simple existing</a>
+  </div>
+
+  <div class="initvar">
+    <a [routerLink]="'initvar/new'">InitVar new</a>
+    <a [routerLink]="'initvar/1'">InitVar existing</a>
+  </div>
+
+  <div class="formx">
+    <a [routerLink]="'formx/new'">Extended FormGroup new</a>
+    <a [routerLink]="'formx/1'">Extended FormGroup existing</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="log">
+  <div *ngFor="let t of logger.events$.value">
+    {{t}}
+  </div>
+</div>
